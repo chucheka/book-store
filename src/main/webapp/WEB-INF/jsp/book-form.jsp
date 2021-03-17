@@ -18,21 +18,27 @@
    <form:hidden path="bookId"/>
    <div class="form-group">
     <form:input path="title" cssClass="form-control" id="title" placeholder="Title"/>
+    <form:errors path="title" cssClass="error" />
    </div>
    <div class="form-group">
     <form:input path="author" cssClass="form-control" id="author" placeholder="Author" />
+    <form:errors path="author" cssClass="error" />
    </div>
    <div class="form-group">
     <form:input path="isbn" cssClass="form-control" id="isbn" placeholder="ISBN"/>
+    <form:errors path="isbn" cssClass="error" />
    </div>
    <div class="form-group">
     <form:input path="publisher" cssClass="form-control" id="publisher" placeholder="Publisher" />
+    <form:errors path="publisher" cssClass="error" />
    </div>
    <div class="form-group">
     <form:input path="country" cssClass="form-control" id="ountry"  placeholder="Country"/>
+    <form:errors path="country" cssClass="error" />
    </div>
    <div class="form-group">
     <form:input path="genre" cssClass="form-control" id="genre" placeholder="Genre"/>
+    <form:errors path="genre" cssClass="error" />
    </div>
    <button type="submit" class="btn">Add Book</button>
   </form:form>

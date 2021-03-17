@@ -5,10 +5,13 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import net.polarisdigitech.book_store.book_store.entity.Book;
+import net.polarisdigitech.book_store.book_store.entity.User;
 
 @Repository
-public interface BookRepository extends JpaRepository<Book, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
-	Optional<Book> findById(Long bookId);
+	Optional<User> findByEmail(String email);
+
+	boolean existsByEmail(String email);
+
 }

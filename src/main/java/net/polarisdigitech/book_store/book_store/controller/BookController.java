@@ -2,6 +2,8 @@ package net.polarisdigitech.book_store.book_store.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -49,8 +51,11 @@ public class BookController {
 	}
 	
 	@PostMapping("/book/addBook")
-	public ModelAndView addBook(@ModelAttribute("book") Book book) {
+	public ModelAndView addBook(@Valid Book book,BindingResult result) {
 		
+		if(result.hasErrors()) {
+            return new ModelAndView("book-form");
+        }
 		bookService.createOrUpdateBook(book);
 		return new ModelAndView("redirect:/book/list");
 	}

@@ -1,5 +1,7 @@
 package net.polarisdigitech.book_store.book_store.dto;
 
+import net.polarisdigitech.book_store.book_store.entity.Genre;
+
 public class BookDto {
 
 	private String title;
@@ -12,20 +14,20 @@ public class BookDto {
 	 
 	 private String country;
 	 
-	 private String gender;
+	 private Genre genre;
 
 	public BookDto() {
 		super();
 	}
 
-	public BookDto(String title, String author, String isbn, String publisher, String country, String gender) {
+	public BookDto(String title, String author, String isbn, String publisher, String country, Genre genre) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.isbn = isbn;
 		this.publisher = publisher;
 		this.country = country;
-		this.gender = gender;
+		this.genre = genre;
 	}
 
 	public String getTitle() {
@@ -68,14 +70,14 @@ public class BookDto {
 		this.country = country;
 	}
 
-	public String getGender() {
-		return gender;
+	public Genre getGenre() {
+		return genre;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setGenre(Genre genre) {
+		this.genre = genre;
 	}
-	
+
 	
 	 
 }
